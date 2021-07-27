@@ -101,6 +101,10 @@ const load = () => {
 submitBtn.addEventListener('click', e => {
     e.preventDefault();
     word = input.value;
+    if (!word) {
+        alert('input invalid');
+        return;
+    }
     pre.style.display = 'none';
     load();
     main.style.display = 'block';
