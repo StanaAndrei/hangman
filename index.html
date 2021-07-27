@@ -4,17 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./script.js"></script>
     <title>Document</title>
 </head>
 <body>
     <h1>HANGMAN</h1>
-    <input type="text" maxlength="50" id="mainInput">
-    <button id="submit">submit</button>
-    
+    <div id="setup">
+        <p>Select the world to be guessed:</p>
+        <input type="text" maxlength="50" id="mainInput" value="aba">
+        <button id="submit">submit</button>
+    </div>
+    <div id="main">
+        <canvas id="" width="500" height="500"></canvas>
+        <hr>
+        <div id="letters"></div>
+        <br><br>
+        <div id="fields"></div>
+    </div>
+    <i id="message"></i>
 </body>
 <style>
+    i {
+        font-size: xx-large;
+    }
     h1 {
         text-align: center;
+    }
+    #main {
+        display: none;
+    }
+    #fields > input {
+        background-color: rgb(255, 255, 255);
+        padding: 5px 5px;
+        width: 10px;
+        border: 1px solid black;
+    }
+    canvas {
+        background-color: royalblue;
     }
 </style>
 </html>
