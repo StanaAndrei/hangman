@@ -74,8 +74,8 @@ const handleLetterBtnClick = (e) => {
 
 const load = () => {
     //load letter-buttons
-    const FIRST = 'a'.charCodeAt(0);
-    const LAST = 'z'.charCodeAt(0);
+    const FIRST = 'A'.charCodeAt(0);
+    const LAST = 'Z'.charCodeAt(0);
     for (let chCode = FIRST; chCode <= LAST; chCode++) {
         let btn = document.createElement('button');
         const ch = String.fromCharCode(chCode);
@@ -101,6 +101,7 @@ const load = () => {
 submitBtn.addEventListener('click', e => {
     e.preventDefault();
     word = input.value;
+    word = word.toUpperCase();
     if (!word) {
         alert('input invalid');
         return;
