@@ -102,7 +102,11 @@ submitBtn.addEventListener('click', e => {
     e.preventDefault();
     word = input.value;
     word = word.toUpperCase();
-    if (!word) {
+    let validWord = true;
+    const setSz = new Set(word).size;
+    validWord &= /^[a-zA-Z]+$/.test(word);
+    validWord &= ((word[0] === word.slice(-1) && setSz > 1) || setSz > 2);
+    if (!validWord) {
         alert('input invalid');
         return;
     }
