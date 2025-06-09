@@ -10,7 +10,7 @@ const drawHorizPilar = (context, w, h) => {
 
 let radius, headX, headY;
 const drawHead = (context, w, h) => {
-    radius = 35, headX = w - w / 4, headY = h / 2;
+    radius = 35; headX = w - w / 4; headY = h / 2;
     context.arc(headX, headY, radius, 0, 2 * Math.PI);
     context.stroke();
     context.beginPath();
@@ -31,25 +31,25 @@ const drawBody = (context, w, h) => {
     context.fillRect(w - w / 4 - 5, h / 2 + radius, BODY_WIDTH, BODY_HEIGHT);
 }
 
-const drawLeftHand = (context, w, h) => {
+const drawLeftHand = (context, _w, _h) => {
     context.moveTo(370, 300);
     context.lineTo(335, 324);
     context.lineWidth = 5;
 }
 
-const drawRightHand = (context, w, h) => {
+const drawRightHand = (context, _w, _h) => {
     context.moveTo(382, 300);
     context.lineTo(420, 324);
     context.lineWidth = 5;
 }
 
-const drawLeftLeg = (context, w, h) => {
+const drawLeftLeg = (context, _w, _h) => {
     context.moveTo(374, 366);
     context.lineTo(362, 397);
     context.lineWidth = 8;
 }
 
-const drawRightLeg = (context, w, h) => {
+const drawRightLeg = (context, _w, _h) => {
     context.moveTo(380, 366);
     context.lineTo(390, 397);
     context.lineWidth = 8;

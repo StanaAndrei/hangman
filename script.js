@@ -6,14 +6,14 @@ const submitBtn = document.querySelector('#submit');
 const main = document.querySelector('#main');
 const lettersDiv = document.querySelector('#letters');
 const fieldsDiv = document.querySelector('#fields');
-let word = new String();
+let word = String();
 const canvas = document.querySelector('canvas');
 const context = canvas.getContext('2d');
 context.fillStyle = 'black';
 context.strokeStyle = 'black';
 
 const updateFields = letter => {
-    if (letter.length != 1) {
+    if (letter.length !== 1) {
         throw new Error('the param is a string!!!');
         //in case I send a string as param instead of a letter
     }
