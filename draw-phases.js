@@ -61,5 +61,8 @@ const drawRope = (context, w, h) => {
     context.lineWidth = 3;
 }
 
-const drawPhases = [drawMainPilar, drawHorizPilar, drawHead, drawBody, drawLeftHand, drawRightHand, drawLeftLeg, drawRightLeg, drawRope];
+const drawPhases = [
+    drawMainPilar, drawHorizPilar, drawHead, drawBody, drawLeftHand,
+    drawRightHand, drawLeftLeg, drawRightLeg, drawRope
+];
 export default drawPhases;
