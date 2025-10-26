@@ -42,12 +42,12 @@ export class DOMManager {
         const input = document.createElement('input');
         input.disabled = true;
         input.maxLength = 1;
-        input.id = 'field';
+        input.className = 'field';
         return input;
     }
 
     getLetterFields() {
-        return document.querySelectorAll('#field');
+        return document.querySelectorAll('.field');
     }
 
     appendToLetters(element) {
